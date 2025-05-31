@@ -1,3 +1,58 @@
 @use "fonts"
 @use "typography"
 @use "variables"
+@use "mixins"
+
+.header
+     @include mixins.container()
+     &__wrapper
+          grid-column: 2/3
+          display: grid
+          grid-template-columns: repeat(3, 1fr)
+          height: 8rem
+          width: 100%
+
+     /* левая часть логотип */
+.logo
+     grid-column: 1/2
+     align-self: center
+     justify-self: start
+     display: flex
+     align-items: center
+     gap: 1.1rem
+     &__text
+          font-family: fonts.$font-face_500
+          font-size: 2.2rem
+          color: variables.$font
+.icon
+     width: 3.2rem
+     height: 3.2rem
+
+     /* центр навигация */
+.nav
+     grid-column: 2/3
+     align-self: center
+     justify-self: center
+.list
+     display: flex
+     flex-wrap: nowrap
+     gap: 4rem
+     &__link
+          font-family: fonts.$font-face_400
+          font-size: 1.6rem
+          color: variables.$gray-1
+          &:hover
+               color: variables.$white
+
+     /* регистрация */
+.registration
+     grid-column: 3/4
+     display: flex
+     align-items: center
+     justify-content: flex-end
+     gap: 4rem
+     &__start
+          font-family: fonts.$font-face_400
+          font-size: 1.6rem
+          color: variables.$font
+
