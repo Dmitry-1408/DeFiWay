@@ -59,3 +59,34 @@
           font-family: fonts.$font-face_400
           font-size: 1.6rem
           color: variables.$font
+
+/* контент левая часть*/
+.content
+     grid-column: 2/3
+     height: 68.8rem
+     padding: 8.8rem 0
+     display: grid
+     grid-template-columns: 57% 43%
+     &__left-side
+          align-self: center
+          display: flex
+          flex-direction: column
+          gap: 4rem
+     //&__right-side
+          //background-image: url()
+
+.title-1
+     font-family: fonts.$font-face_700
+     color: variables.$white
+     font-size: 6.4rem
+
+.subtitle
+     font-family: fonts.$font-face_400
+     font-size: 2rem
+     color: variables.$gray-1
+     max-width: 60rem
+
+.btn-wrap
+     display: flex
+     justify-content: flex-start
+     gap: 2rem
