@@ -67,26 +67,36 @@
      padding: 8.8rem 0
      display: grid
      grid-template-columns: 57% 43%
-     &__left-side
-          align-self: center
-          display: flex
-          flex-direction: column
-          gap: 4rem
-     //&__right-side
-          //background-image: url()
+
+.left-side
+     align-self: center
+     display: flex
+     flex-direction: column
+     gap: 4rem
 
 .title-1
      font-family: fonts.$font-face_700
      color: variables.$white
      font-size: 6.4rem
+     line-height: 110%
 
 .subtitle
      font-family: fonts.$font-face_400
      font-size: 2rem
      color: variables.$gray-1
      max-width: 60rem
+     line-height: 140%
 
 .btn-wrap
      display: flex
      justify-content: flex-start
      gap: 2rem
+
+/* контент правая часть */
+.right-side
+     grid-column: 2/3
+     //width: 100%
+     //height: 100%
+     //justify-self: stretch
+     //justify-self: center
+     //align-self: center
