@@ -1,7 +1,52 @@
 @use "fonts"
 @use "typography"
 @use "variables"
+@use "mixins"
 
-.class
-     font-family: fonts.$font-face_100
-     font-size: 10rem
+.partners
+     grid-column: 1/4
+     width: 100%
+     height: max-content
+     padding: 4rem 0 4rem 0
+     background-color: variables.$gray-4
+     display: grid
+     grid-template-columns: 1fr
+     &__title
+          font-family: fonts.$font-face_400
+          font-size: 1.6rem
+          color: variables.$gray-1
+          justify-self: center
+          margin-bottom: 4rem
+     &__logo
+          grid-column: 1/2
+          justify-self: center
+          display: grid
+          grid-template-columns: minmax(1rem, 1fr) repeat(5, min-content) minmax(1rem, 1fr)
+          gap: 7.2rem
+
+
+.partner
+     display: flex
+     align-items: center
+     gap: .7rem
+
+
+.partner-icon
+     width: 3.1rem
+     height: 3.1rem
+
+.partner-name
+     font-family: fonts.$font-face_500
+     color: variables.$gray-1
+     font-size: 1.6rem
+
+.partner-1
+     grid-column: 2/3
+.partner-2
+     grid-column: 3/4
+.partner-3
+     grid-column: 4/5
+.partner-4
+     grid-column: 5/6
+.partner-5
+     grid-column: 6/7
