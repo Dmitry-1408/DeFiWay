@@ -1,0 +1,25 @@
+@use "fonts"
+@use "typography"
+@use "variables"
+@use "mixins"
+
+/* стили кнопки находятся в button.sass */
+
+.top-section
+     grid-column: 2/3
+     display: flex
+     flex-direction: column
+     align-items: center
+     gap: 2rem
+
+.title
+     font-family: fonts.$font-face_400
+     font-size: 4.8rem
+     color: variables.$white
+
+.paragraph-section
+     font-family: fonts.$font-face_400
+     font-size: 1.4rem
+     line-height: 140%
+     color: variables.$gray-1
+     text-align: center
