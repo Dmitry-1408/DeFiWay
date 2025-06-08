@@ -1,3 +1,71 @@
 @use "fonts"
 @use "typography"
 @use "variables"
+@use "mixins"
+
+.swiper-pos
+     grid-column: 1/4
+     padding-top: 8rem
+     padding-bottom: 7.2rem
+     background-color: variables.$gray-4
+
+
+.wrapper
+     grid-column: 1/4
+     background-color: variables.$gray-4
+     padding-bottom: 13.6rem
+     display: flex
+     flex-direction: column
+     gap: 2rem
+
+.swiper
+     width: 100%
+     height: min-content
+
+.swiper-wrapper
+     height: min-content
+
+
+.quote
+     font-family: fonts.$font-face_400
+     font-size: 1.6rem
+     font-style: italic
+     color: variables.$quote
+
+.autor
+     display: flex
+     flex-direction: row
+     gap: 1.6rem
+
+.autor-wrap
+     display: flex
+     flex-direction: column
+     justify-content: center
+     gap: .5rem
+
+.name
+     font-family: fonts.$font-face_400
+     font-size: 1.4rem
+     color: variables.$font
+
+.cofounder
+     font-family: fonts.$font-face_400
+     font-size: 1.2rem
+     color: variables.$gray-2
+
+.swiper-slide
+     width: 36.9rem
+     height: 20.4rem
+     background: variables.$black
+     border: solid .1rem variables.$gray-2
+     border-radius: 1.6rem
+     padding: 3.2rem
+     display: flex
+     align-items: stretch
+
+.slide-content
+     width: 100%
+     height: 100%
+     display: flex
+     flex-direction: column
+     justify-content: space-between
