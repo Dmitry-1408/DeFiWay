@@ -9,6 +9,9 @@
 
 .accordion
     grid-column: 2/3
+    display: flex
+    flex-direction: column
+    gap: 3rem
     padding-bottom: 8rem
     justify-self: center
     max-width: 79.2rem
@@ -19,6 +22,7 @@
     &__content
         display: flex
         justify-content: space-between
+        align-items: center
         width: 100%
         padding: 2rem
         border: solid .1rem variables.$gray-2
@@ -36,33 +40,31 @@
             background-color: variables.$white
             transform: rotate(0deg) translate(0rem, .35rem)
             &:last-child
-                transform: rotate(90deg) translate(.15rem, .0rem)
+                transform: rotate(90deg) translate(-0.2rem, .0rem)
 
 .accordion-active
-    border: solid .1rem variables.$gray-2
-    background-color: variables.$gray-4
-    padding: 2rem
-    width: 100%
-    height: max-content
-    /* начальное состояние */
+    max-height: 0
+    overflow: hidden
     opacity: 0
-    transform: translateY(-100%)
-    transition: opacity 0.5s ease, transform 0.5s ease
+    padding: 0 2rem
+    transition: all .2s ease
+    border: none
+    background-color: transparent
+
+.accordion__wrapper.active
+    .accordion-active
+        max-height: 100rem
+        opacity: 1
+        padding: 2rem
+        background-color: variables.$gray-4
+        border: solid 0.1rem variables.$gray-2
+    .accordion__cross span:first-child
+        transform: rotate(45deg) translate(0.1rem, 0.3rem)
+    .accordion__cross span:last-child
+        transform: rotate(-45deg) translate(0.1rem, -0.3rem)
 
 .spoiler
     font-family: fonts.$font-face_400
     font-size: 1.6rem
     color: variables.$white
     line-height: 170%
-
-.cross-active
-    opacity: 0
-    .span
-        opacity: 0
-        display: block
-        width: 2rem
-        height: .2rem
-        background-color: variables.$white
-        transform: rotate(45deg) translate(-.29rem, .8rem)
-        &:last-child
-            transform: rotate(-45deg) translate(-.7rem, -.5rem)
