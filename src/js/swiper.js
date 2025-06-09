@@ -10,7 +10,7 @@ const swiper = new Swiper(".mySwiper", {
     delay: 0,
     disableOnInteraction: false,
   },
-  allowTouchMove: true, // разрешаем свайп
+  allowTouchMove: true,
   keyboard: {
     enabled: true,
     onlyInViewport: true,
@@ -22,10 +22,10 @@ const swiper = new Swiper(".mySwiper", {
   },
 });
 
-
 const swiper2 = new Swiper(".mySwiper2", {
   loop: true,
   slidesPerView: "auto",
+  centeredSlides: true,
   spaceBetween: 20,
   speed: 5000,
   autoplay: {
@@ -33,16 +33,15 @@ const swiper2 = new Swiper(".mySwiper2", {
     disableOnInteraction: false,
   },
   allowTouchMove: false,
-  allowTouchMove: true, // разрешаем свайп
   keyboard: {
-    enabled: true,
-    onlyInViewport: true,
+    enabled: false,
   },
   mousewheel: {
-    enabled: true,
-    sensitivity: 1,
-    forceToAxis: true,
+    enabled: false,
   },
 });
 
+/* зависимость второго слайдера от первого */
+swiper.controller.control = swiper2;
+swiper2.controller.control = swiper;
 
