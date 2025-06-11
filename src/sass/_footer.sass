@@ -1,3 +1,109 @@
 @use "fonts"
 @use "typography"
 @use "variables"
+@use "mixins"
+
+.footer
+    padding: 12rem 0 4rem 0
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 8rem
+    &__content
+        max-width: 140rem
+        display: grid
+        grid-auto-flow: column
+        gap: 9.2rem
+
+.contakts
+    display: flex
+    gap: 1.6rem
+
+.column
+    font-family: fonts.$font-face_400
+    font-size: 3rem
+    color: variables.$white
+    justify-self: start
+    align-self: start
+    &:first-child
+        justify-self: center
+    &__title
+        font-family: fonts.$font-face_400
+        font-size: 2rem
+        color: variables.$white
+        line-height: 140%
+        margin-bottom: 2.4rem
+    &__wrapper-title
+        max-width: 30rem
+    &__logo
+        position: relative
+        bottom: .3rem
+
+.list-footer
+    flex-direction: column
+    gap: .8rem
+
+.footer-tg
+    width: 3rem
+    height: 3rem
+    opacity: 30%
+
+.use
+    margin-right: 1rem
+    &:last-child
+        margin-right: 0
+
+.information
+    display: flex
+    align-items: center
+    gap: 2rem
+
+.contacts-title
+    font-family: fonts.$font-face_400
+    font-size: 2rem
+    color: variables.$gray-1
+
+/* forms */
+
+.email-form
+    position: relative
+    width: 100%
+    display: flex
+    flex-direction: column
+    & input[type="email"]
+        width: 100%
+        padding: 1.2rem 4.8rem 3rem 0
+        border: none
+        //border-bottom: .1rem solid variables.$gray-1
+        background: transparent
+        color: variables.$white
+        font-size: 1.6rem
+        outline: none
+    & input::placeholder
+        color: variables.$gray-1
+
+.form-span
+    width: 100%
+    height: .1rem
+    background-color: variables.$gray-1
+
+.btn-form
+    display: flex
+    justify-content: center
+    align-items: center
+    position: absolute
+    right: 0
+    top: 50%
+    transform: translateY(-50%)
+    border-radius: 50%
+    padding: .8rem 1.4rem
+    top: 2rem
+
+.message
+    margin-top: 12px
+    font-size: 14px
+    color: variables.$green
+    text-align: center
+
+.error
+    color: variables.$red
