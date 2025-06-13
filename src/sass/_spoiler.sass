@@ -6,6 +6,10 @@
 .spoiler-pos
     padding-top: 8rem
     padding-bottom: 7.2rem
+    @include variables.respond(desktop)
+          padding-top: 6rem
+          padding-bottom: 6rem
+          text-align: center
 
 .accordion
     grid-column: 2/3
@@ -16,6 +20,8 @@
     justify-self: center
     max-width: 79.2rem
     width: 100%
+    @include variables.respond(desktop)
+          padding-bottom: 6rem
     &__wrapper
         width: 100%
         height: auto
