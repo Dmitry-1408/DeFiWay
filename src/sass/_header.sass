@@ -70,6 +70,10 @@
      @include variables.respond(desktop)
           height: 100%
           padding: 3rem 0
+     @include variables.respond(tablet)
+          display: flex
+          flex-wrap: wrap
+          justify-content: center
 
 .left-side
      align-self: center
@@ -78,6 +82,8 @@
      gap: 4rem
      @include variables.respond(desktop)
           gap: 2rem
+     @include variables.respond(tablet)
+          text-align: center
 
 .title-1
      font-family: fonts.$font-face_700
@@ -86,6 +92,8 @@
      line-height: 110%
      @include variables.respond(desktop)
           font-size: 5rem
+     @include variables.respond(tablet)
+          font-size: 4rem
 
 .subtitle
      font-family: fonts.$font-face_400
@@ -93,15 +101,24 @@
      color: variables.$gray-1
      max-width: 60rem
      line-height: 140%
+     @include variables.respond(tablet)
+          font-size: 1.6rem
 
 .btn-wrap
      display: flex
      justify-content: flex-start
      gap: 2rem
+     @include variables.respond(tablet)
+          flex-direction: column
+          align-items: center
+          padding-bottom: 3.2rem
 
 /* контент правая часть */
 .right-side
      grid-column: 2/3
      @include variables.respond(desktop)
           align-self: center
+     @include variables.respond(tablet)
+          img
+               width: 30rem
 
