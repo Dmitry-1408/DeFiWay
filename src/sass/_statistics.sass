@@ -9,6 +9,9 @@
      background-color: variables.$gray-4
      @include variables.respond(desktop)
           padding-top: 6rem
+     @include variables.respond(tablet)
+          padding: 3.2rem 2rem 0 2rem
+          text-align: center
 
 .statistics
      background-color: variables.$gray-4
@@ -21,6 +24,12 @@
      @include variables.respond(desktop)
           padding-top: 6rem
           padding-bottom: 6rem
+     @include variables.respond(tablet)
+          display: flex
+          flex-direction: column
+          gap: 2.4rem
+          padding-top: 3.2rem
+          padding-bottom: 3.2rem
 
 .block
      display: flex

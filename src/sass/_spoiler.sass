@@ -10,6 +10,9 @@
           padding-top: 6rem
           padding-bottom: 6rem
           text-align: center
+    @include variables.respond(tablet)
+        padding-top: 4rem
+        padding-bottom: 4rem
 
 .accordion
     grid-column: 2/3
@@ -21,7 +24,9 @@
     max-width: 79.2rem
     width: 100%
     @include variables.respond(desktop)
-          padding-bottom: 6rem
+        padding-bottom: 6rem
+    @include variables.respond(tablet)
+        padding-bottom: 4rem
     &__wrapper
         width: 100%
         height: auto

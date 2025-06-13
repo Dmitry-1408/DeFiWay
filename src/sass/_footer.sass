@@ -12,6 +12,8 @@
     @include variables.respond(desktop)
         padding: 6rem 2rem
         gap: 6rem
+    @include variables.respond(tablet)
+        padding: 4rem 2rem
     &__content
         max-width: 140rem
         display: grid
@@ -22,6 +24,8 @@
             justify-content: center
             flex-wrap: wrap
             gap: 5rem
+        @include variables.respond(tablet)
+            flex-direction: column
 
 .contakts
     display: flex
@@ -35,6 +39,12 @@
     align-self: start
     &:first-child
         justify-self: center
+    @include variables.respond(tablet)
+        width: 100%
+        display: flex
+        flex-direction: column
+        align-items: center
+        text-align: center
     &__title
         font-family: fonts.$font-face_400
         font-size: 2rem

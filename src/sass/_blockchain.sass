@@ -10,6 +10,8 @@
           padding-top: 6rem
           padding-bottom: 0
           text-align: center
+     @include variables.respond(tablet)
+          padding-top: 3.2rem
 
 .blockchain
      padding-bottom: 6rem
@@ -17,6 +19,8 @@
      display: grid
      grid-template-columns: repeat(2, auto)
      gap: 7.2rem
+     @include variables.respond(tablet)
+          padding-bottom: 4rem
      @include variables.respond(desktop)
           display: flex
           flex-wrap: wrap
@@ -25,9 +29,14 @@
      &__img
           align-self: center
           grid-column: 1/2
-          img
-               overflow: hidden
-               height: 40rem
+          @include variables.respond(desktop)
+               img
+                    overflow: hidden
+                    height: 40rem
+          @include variables.respond(tablet)
+               img
+                    overflow: hidden
+                    height: 30rem
      &__box
           align-self: center
           max-width: 62.2rem

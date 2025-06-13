@@ -22,6 +22,7 @@ const swiper = new Swiper(".mySwiper", {
   },
 });
 
+
 const swiper2 = new Swiper(".mySwiper2", {
   loop: true,
   slidesPerView: "auto",

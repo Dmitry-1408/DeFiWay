@@ -11,6 +11,8 @@
      @include variables.respond(desktop)
           padding-top: 6rem
           padding-bottom: 6rem
+     @include variables.respond(tablet)
+          padding: 4rem 2rem 3.2rem 2rem
 
 .wrapper
      grid-column: 1/4
@@ -21,10 +23,16 @@
      gap: 2rem
      @include variables.respond(desktop)
           padding-bottom: 6rem
+     @include variables.respond(tablet)
+          padding-bottom: 4rem
 
 .swiper
      width: 100%
      height: min-content
+     
+.mySwiper2
+     @include variables.respond(tablet)
+          display: none
 
 .swiper-wrapper
      height: min-content
