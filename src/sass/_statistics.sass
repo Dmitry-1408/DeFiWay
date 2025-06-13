@@ -7,6 +7,8 @@
      grid-column: 1/4
      padding-top: 12rem
      background-color: variables.$gray-4
+     @include variables.respond(desktop)
+          padding-top: 6rem
 
 .statistics
      background-color: variables.$gray-4
@@ -16,6 +18,9 @@
      display: flex
      justify-content: center
      gap: 7.2rem
+     @include variables.respond(desktop)
+          padding-top: 6rem
+          padding-bottom: 6rem
 
 .block
      display: flex

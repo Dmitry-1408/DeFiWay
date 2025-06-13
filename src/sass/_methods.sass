@@ -5,6 +5,8 @@
 
 .methods-pos
      padding-top: 8rem
+     @include variables.respond(desktop)
+          padding-top: 6rem
 
 .methods
      padding-top: 8rem
@@ -13,6 +15,9 @@
      grid-template-columns: repeat(12, 1fr)
      gap: 2.4rem
      padding-bottom: 8rem
+     @include variables.respond(desktop)
+          padding-top: 6rem
+          padding-bottom: 6rem
 
 .methods-icon
      width: 3.6rem
@@ -31,6 +36,9 @@
      font-size: 1.6rem
      color: variables.$gray-1
      text-align: center
+     @include variables.respond(desktop)
+          font-size: 1.2rem
+          line-height: 140%
 
 .card
      display: flex
