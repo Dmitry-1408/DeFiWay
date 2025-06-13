@@ -7,6 +7,8 @@
      @include mixins.container()
      width: 100%
      height: max-content
+     @include variables.respond(desktop)
+          grid-template-columns: 1fr minmax(0, 76rem) 1fr
 
 /* @mixin container()
      display: grid

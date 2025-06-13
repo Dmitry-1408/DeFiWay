@@ -67,18 +67,25 @@
      padding: 8.8rem 0
      display: grid
      grid-template-columns: 57% 43%
+     @include variables.respond(desktop)
+          height: 100%
+          padding: 3rem 0
 
 .left-side
      align-self: center
      display: flex
      flex-direction: column
      gap: 4rem
+     @include variables.respond(desktop)
+          gap: 2rem
 
 .title-1
      font-family: fonts.$font-face_700
      color: variables.$white
      font-size: 6.4rem
      line-height: 110%
+     @include variables.respond(desktop)
+          font-size: 5rem
 
 .subtitle
      font-family: fonts.$font-face_400
@@ -95,4 +102,6 @@
 /* контент правая часть */
 .right-side
      grid-column: 2/3
+     @include variables.respond(desktop)
+          align-self: center
 
