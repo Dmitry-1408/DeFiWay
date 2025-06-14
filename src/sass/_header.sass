@@ -5,6 +5,9 @@
 
 .header
      @include mixins.container()
+     background: -webkit-linear-gradient(270deg, rgb(0, 0, 0) 58%, rgb(15, 7, 51))
+     background: -moz-linear-gradient(270deg, rgb(0, 0, 0) 58%, rgb(15, 7, 51))
+     background: linear-gradient(270deg, rgb(0, 0, 0) 58%, rgb(15, 7, 51))
      &__wrapper
           grid-column: 2/3
           display: grid
@@ -121,4 +124,3 @@
      @include variables.respond(tablet)
           img
                width: 30rem
-
